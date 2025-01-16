@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bc9f05cc92.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <img src="logo-removebg-preview.png" alt="Logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://github.com/Lalithadevi2005?tab=repositories">Github</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <marquee behavior="alternate" direction="up" scrollamount="5" width="50%">
+                    <h1>Hi, I'm <span id="la">Lalitha Devi Thonta</span></h1>
+                    <h3 class="wb">WEB DEVELOPER</h3>
+                    <p id="pa">Improving accuracy and efficiency by maintaining administrative and focused communication while possessing problem-solving capabilities.</p>
+                </marquee>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="aboutme.jpeg" alt="About Me" width="300px" height="300px">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Motivated student with a passion for software development and problem-solving. Seeking opportunities to apply coding skills and contribute to innovative projects in a dynamic software environment.</p>
+                    <div class="tab-titles">
+                        <p class="tablinks active" onclick="opentab('Skills')">Skills</p>
+                        <p class="tablinks" onclick="opentab('Projects')">Projects</p>
+                        <p class="tablinks" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-content active-tab" id="Skills">
+                        <ul>
+                            <li><span>Frontend Development</span><br>HTML,CSS,JavaScript,React.Js</li>
+                            <li><span>Amazon Web Services</span><br>EC2, S3, VPC, CloudWatch</li>
+                            <li><span>Google Cloud Platform</span><br>Compute Engine, Cloud Storage, App Engine</li>
+                            <li><span>Programming Languages</span><br>Advanced: Python<br>Intermediate: C<br>Basics: Java</li>
+                            <li><span>Photo Editing Tools</span><br>Photoshop</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="Projects">
+                        <ul>
+                            <li>
+                                <span>Line-Follower Robot using Arduino</span><br>
+                                Built a line-following robot as part of an Arduino workshop. Gained hands-on experience in assembling an Arduino board, wiring components, and coding to control motor functions and sensors.
+                            </li>
+                            <li>
+                                <span>Weather Report Website</span><br>
+                                Developed a dynamic weather report website using APIs to fetch real-time data. The project included features like city-based weather lookup, responsive design, and integration of weather icons.
+                            </li>
+                            <li>
+                                <span>E-commerce Web Page</span><br>
+                                Designed an e-commerce web page with product listings, a shopping cart system, and user-friendly navigation. Focused on creating an appealing UI and optimizing the site for speed and usability.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="Education">
+                        <ul>
+                            <li><span>B.Tech, EEE</span><br>Minor: CSE<br>S.R.K.R Engineering College, Bhimavaram, A.P<br><span>Percentage:</span> 85%</li>
+                            <li><span>Intermediate</span><br>Narayana Junior College, Bhimavaram, A.P<br><span>Percentage:</span> 91.3%</li>
+                            <li><span>10th Standard</span><br>Aditya Public School, Bhimavaram, A.P<br><span>Percentage:</span> 98.5%</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h1 class="subtitle">My Services</h1>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Design and development of responsive and user-friendly websites tailored to client requirements.</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <h2>Line Follower Robot</h2>
+                <p>Designed and programmed a line-following robot using Arduino, incorporating real-time sensor data and efficient motor control.</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> devilalitha389@gmail.com</p>
+                    <p><i class="fa-solid fa-square-phone"></i> 9398006955</p>
+                    <div class="socialicons">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter-square"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <button><a href="myresume.pdf" download="Lalitha_Devi_Resume.pdf" class="box">Download CV</a></button>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="box box1">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const tablinks = document.getElementsByClassName("tablinks");
+        const tabcontents = document.getElementsByClassName("tab-content");
+
+        function opentab(tabname) {
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
